@@ -1,0 +1,43 @@
+class List {
+    init(value) {
+        this.value = value;
+        this.next = nil;
+    }
+
+    dump() {
+        var current = this;
+
+        while (current) {
+            print current.value;
+            current = current.next;
+        }
+    }
+
+    append(value) {
+        var leader = this;
+        var follower;
+
+        while (leader) {
+            follower = leader;
+            leader = leader.next;
+        }
+
+        var newNode = List(value);
+        follower.next = newNode;
+    }
+}
+
+var lst = List(4);
+lst.append(8);
+lst.append(15);
+lst.append(16);
+lst.append(23);
+lst.append(42);
+lst.dump();
+
+// 4
+// 8
+// 15
+// 16
+// 23
+// 42
