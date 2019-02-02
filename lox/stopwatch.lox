@@ -25,7 +25,8 @@ fun foo() {
     }
 }
 
-// stopwatch(foo)();
+stopwatch(foo)();
+
 // 0
 // 1
 // 1

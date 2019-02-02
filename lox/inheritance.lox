@@ -11,4 +11,6 @@ class B < A {
     }
 }
 
-B().foo();
+// B().foo();
+// A.foo
+// B.foo
