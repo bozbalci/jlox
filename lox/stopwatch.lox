@@ -1,0 +1,26 @@
+fun stopwatch(fn) {
+    var start;
+    var end;
+
+    fun closure() {
+        start = clock();
+        fn();
+        end = clock();
+        print "=== Stopwatch ===";
+        print end - start;
+        print "=================";
+    }
+
+    return closure;
+}
+
+fun foo() {
+    print "I'm just a function!";
+}
+
+stopwatch(foo)();
+
+// I'm just a function!
+// === Stopwatch ===
+// 0.0010001659393310547
+// =================
